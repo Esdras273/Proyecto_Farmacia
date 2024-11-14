@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1731609164 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1731624306 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
 	"Producto.h"
+	"Medicamento.h"
+	"Alimento.h"
 
 1731608992 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
@@ -12,6 +14,14 @@
 1731610693 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\medicamento.cpp
 	"Medicamento.h"
 
-1731610267 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\medicamento.h
+1731612405 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\medicamento.h
 	<iostream>
+	"Producto.h"
+
+1731612125 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\alimento.cpp
+	"Alimento.h"
+
+1731612434 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\alimento.h
+	<iostream>
+	"Producto.h"
 
