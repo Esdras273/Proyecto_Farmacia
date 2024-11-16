@@ -5,13 +5,33 @@ Producto::Producto()
 
 }
 
+//Metodos propios de la clase
+void Producto::comprar(int cantidad)
+{
+    stock += cantidad;
+    cout << "El stock para " << nombre << " es de: " << stock << endl;
+}
+
+void Producto::vender(int cantidad)
+{
+    if(stock < cantidad)
+    {
+        cout << "No hay suficiente stock para la cantidad de venta" << endl;
+    }
+    else
+    {
+        stock -= cantidad;
+        cout << "Venta realizada, quedan " << stock << " productos" << endl;
+    }
+}
+
 //Getters y setters
-int Producto::getPrecio()
+float Producto::getPrecio()
 {
     return precio;
 }
 
-void Producto::setPrecio(int precio)
+void Producto::setPrecio(float precio)
 {
     this -> precio=precio;
 }

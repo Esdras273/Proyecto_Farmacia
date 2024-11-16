@@ -4,13 +4,15 @@
 #include <iostream>
 #include "Producto.h"
 
+#include "Refrigerador.h"
+
 using namespace std;
 
 
 class Alimento : public Producto
 {
     private:
-        string refrigerador;
+        Refrigerador *refrigerador;
         string tipoAlimento;
         int cantidad;
         string contenidoNutricional;
@@ -18,9 +20,13 @@ class Alimento : public Producto
     public:
         Alimento();     //Contructor
 
+        //Metodos propios
+        void comprar(int);
+        void vender(int);
+
         //Getters y setters
-        string getRefrigerador();
-        void setRefrigerador(string);
+        Refrigerador *getRefrigerador(){ return refrigerador;};
+        void setRefrigerador(Refrigerador *refri) {refrigerador = refri;};
 
         string getTipoAlimento();
         void setTipoAlimento(string);

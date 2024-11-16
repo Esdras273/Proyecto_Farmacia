@@ -6,8 +6,8 @@ using namespace std;
 
 class Producto
 {
-    private:
-    int precio;
+    protected:
+    float precio;
     int id;
     string nombre;
     int stock;
@@ -15,9 +15,13 @@ class Producto
     public:
     Producto();     //Contructor
 
+    //Metodos propios
+    virtual void comprar(int);
+    virtual void vender(int);
+
     //Getters y setters
-    int getPrecio();
-    void setPrecio(int);
+    float getPrecio();
+    void setPrecio(float);
 
     int getId();
     void setId(int);
