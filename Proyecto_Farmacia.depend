@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1731624306 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
 	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
 
-1731608992 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
-1731608314 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
 	<iostream>
 
 1731610693 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\medicamento.cpp
@@ -71,4 +71,39 @@
 1731792815 d:\udg\tercer semestre\poo\proyecto_farmacia\include\refrigerador.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
+
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\medicamento.h
+	<iostream>
+	"Producto.h"
+	"Almacen.h"
+
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\almacen.h
+	<iostream>
+	"MetodoAlmacenamiento.h"
+
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
+
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
+	<iostream>
+	"Producto.h"
+	"Refrigerador.h"
+
+1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\refrigerador.h
+	<iostream>
+	"MetodoAlmacenamiento.h"
+
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
+	"Alimento.h"
+
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
+	"Almacen.h"
+
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
+	"Medicamento.h"
+
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
+	"MetodoAlmacenamiento.h"
+
+1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\refrigerador.cpp
+	"Refrigerador.h"
 
