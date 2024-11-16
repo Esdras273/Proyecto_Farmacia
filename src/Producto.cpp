@@ -3,38 +3,45 @@
 Producto::Producto()
 {
 
-    //ctor
 }
 
-int Producto::getPrecio(void)
+//Getters y setters
+int Producto::getPrecio()
 {
     return precio;
 }
+
 void Producto::setPrecio(int precio)
 {
-    this->precio=precio;
+    this -> precio=precio;
 }
-int Producto::getId(void)
+
+int Producto::getId()
 {
     return id;
 }
+
 void Producto::setId(int id)
 {
-    this->id=id;
+    this -> id = id;
 }
-string Producto::getNombre(void)
+
+string Producto::getNombre()
 {
     return nombre;
 }
+
 void Producto::setNombre(string nombre)
 {
-    this->nombre=nombre;
+    this -> nombre = nombre;
 }
-int Producto::getStock(void)
+
+int Producto::getStock()
 {
     return stock;
 }
+
 void Producto::setStock(int stock)
 {
-    this->stock=stock;
+    this -> stock = stock;
 }

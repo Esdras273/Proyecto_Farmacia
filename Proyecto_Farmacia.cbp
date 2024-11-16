@@ -36,12 +36,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Alimento.cpp" />
-		<Unit filename="Alimento.h" />
-		<Unit filename="Medicamento.cpp" />
-		<Unit filename="Medicamento.h" />
+		<Unit filename="include/Alimento.h" />
+		<Unit filename="include/Medicamento.h" />
 		<Unit filename="include/Producto.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Alimento.cpp" />
+		<Unit filename="src/Medicamento.cpp" />
 		<Unit filename="src/Producto.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

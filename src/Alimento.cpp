@@ -5,35 +5,43 @@ Alimento::Alimento()
     //ctor
 }
 
-string Alimento::getRefrigerador(void)
+//Getters y setters
+string Alimento::getRefrigerador()
 {
     return refrigerador;
 }
+
 void Alimento::setRefrigerador(string refrigerador)
 {
-    this->refrigerador=refrigerador;
+    this -> refrigerador = refrigerador;
 }
-string Alimento::getTipoAlimento(void)
+
+string Alimento::getTipoAlimento()
 {
     return tipoAlimento;
 }
+
 void Alimento::setTipoAlimento(string tipoAlimento)
 {
-    this->tipoAlimento=tipoAlimento;
+    this -> tipoAlimento = tipoAlimento;
 }
-int Alimento::getCantidad(void)
+
+int Alimento::getCantidad()
 {
     return cantidad;
 }
+
 void Alimento::setCantidad(int cantidad)
 {
-    this->cantidad=cantidad;
+    this -> cantidad = cantidad;
 }
-string Alimento::getContenidoNutricional(void)
+
+string Alimento::getContenidoNutricional()
 {
     return contenidoNutricional;
 }
+
 void Alimento::setContenidoNutricional(string contenidoNutricional)
 {
-    this->contenidoNutricional=contenidoNutricional;
+    this -> contenidoNutricional = contenidoNutricional;
 }

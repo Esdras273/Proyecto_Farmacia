@@ -5,35 +5,41 @@ Medicamento::Medicamento()
     //ctor
 }
 
-string Medicamento::getAlmacen(void)
+//Getters y setters
+string Medicamento::getAlmacen()
 {
     return almacen;
 }
+
 void Medicamento::setAlmacen(string almacen)
 {
-    this->almacen=almacen;
+    this -> almacen = almacen;
 }
-string Medicamento::getTipoMedicamento(void)
+
+string Medicamento::getTipoMedicamento()
 {
     return tipoMedicamento;
 }
+
 void Medicamento::setTipoMedicamento(string tipoMedicamento)
 {
-    this->tipoMedicamento=tipoMedicamento;
+    this -> tipoMedicamento = tipoMedicamento;
 }
-int Medicamento::getDosis(void)
+int Medicamento::getDosis()
 {
     return dosis;
 }
+
 void Medicamento::setDosis(int dosis)
 {
-    this->dosis=dosis;
+    this -> dosis = dosis;
 }
-string Medicamento::getViaAdministracion(void)
+string Medicamento::getViaAdministracion()
 {
     return viaAdministracion;
 }
+
 void Medicamento::setViaAdministracion(string viaAdministracion)
 {
-    this->viaAdministracion=viaAdministracion;
+    this -> viaAdministracion = viaAdministracion;
 }

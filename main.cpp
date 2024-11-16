@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "Producto.h"
 #include "Medicamento.h"
 #include "Alimento.h"
@@ -27,7 +28,6 @@ int main()
     cout<<ali.getNombre()<<endl;
     cout<<ali.getContenidoNutricional()<<endl;
     cout<<ali.getTipoAlimento()<<endl;
-
 
     return 0;
 }

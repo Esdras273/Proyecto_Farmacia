@@ -13,15 +13,19 @@ class Producto
     int stock;
 
     public:
-    Producto();
+    Producto();     //Contructor
 
-    int getPrecio(void);
+    //Getters y setters
+    int getPrecio();
     void setPrecio(int);
-    int getId(void);
+
+    int getId();
     void setId(int);
-    string getNombre(void);
+
+    string getNombre();
     void setNombre(string);
-    int getStock(void);
+
+    int getStock();
     void setStock(int);
 
 };

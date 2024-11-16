@@ -25,3 +25,29 @@
 	<iostream>
 	"Producto.h"
 
+1731708451 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\producto.cpp
+	"Producto.h"
+
+1731708435 d:\udg\tercer semestre\poo\proyecto_farmacia\include\producto.h
+	<iostream>
+
+1731708547 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
+	"Alimento.h"
+
+1731708495 d:\udg\tercer semestre\poo\proyecto_farmacia\include\alimento.h
+	<iostream>
+	"Producto.h"
+
+1731708682 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
+	"Medicamento.h"
+
+1731708598 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
+	<iostream>
+	"Producto.h"
+
+1731702571 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+	<iostream>
+	"Producto.h"
+	"Medicamento.h"
+	"Alimento.h"
+
