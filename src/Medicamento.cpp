@@ -5,17 +5,29 @@ Medicamento::Medicamento()
     //ctor
 }
 
+//Metodos propios de la clase
+void Alimento::comprar(int cantidad)
+{
+    cout << "En stock " << stock << " " << nombre << endl;
+    stock += cantidad;
+    cout << "Compra realizada" << endl;
+    cout << "El nuevo stock para " << nombre << " es de: " << stock << endl;
+}
+
+void Alimento::vender(int cantidad)
+{
+    if(stock < cantidad)
+    {
+        cout << "No hay suficiente stock para la cantidad de venta" << endl;
+    }
+    else
+    {
+        stock -= cantidad;
+        cout << "Venta realizada, quedan " << stock << " productos" << endl;
+    }
+}
+
 //Getters y setters
-string Medicamento::getAlmacen()
-{
-    return almacen;
-}
-
-void Medicamento::setAlmacen(string almacen)
-{
-    this -> almacen = almacen;
-}
-
 string Medicamento::getTipoMedicamento()
 {
     return tipoMedicamento;

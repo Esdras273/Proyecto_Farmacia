@@ -37,12 +37,18 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Alimento.h" />
+		<Unit filename="include/Almacen.h" />
 		<Unit filename="include/Medicamento.h" />
+		<Unit filename="include/MetodoAlmacenamiento.h" />
 		<Unit filename="include/Producto.h" />
+		<Unit filename="include/Refrigerador.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alimento.cpp" />
+		<Unit filename="src/Almacen.cpp" />
 		<Unit filename="src/Medicamento.cpp" />
+		<Unit filename="src/MetodoAlmacenamiento.cpp" />
 		<Unit filename="src/Producto.cpp" />
+		<Unit filename="src/Refrigerador.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

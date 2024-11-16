@@ -4,12 +4,14 @@
 #include <iostream>
 #include "Producto.h"
 
+#include "Almacen.h"
+
 using namespace std;
 
 class Medicamento : public Producto
 {
     private:
-        string almacen;
+        Almacen *almacen;
         string tipoMedicamento;
         int dosis;
         string viaAdministracion;
@@ -17,9 +19,13 @@ class Medicamento : public Producto
     public:
         Medicamento();      //Constructor
 
+        //Metodos propios
+        void comprar(int);
+        void vender(int);
+
         //Getters y setters
-        string getAlmacen();
-        void setAlmacen(string);
+        Almacen *getAlmacen() { return almacen;};
+        void setAlmacen(Almacen *almacenNuevo) {almacen = almacenNuevo;};
 
         string getTipoMedicamento();
         void setTipoMedicamento(string);
