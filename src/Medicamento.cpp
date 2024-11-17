@@ -6,19 +6,19 @@ Medicamento::Medicamento()
 }
 
 //Metodos propios de la clase
-void Alimento::comprar(int cantidad)
+void Medicamento::comprar(int cantidad)
 {
     cout << "En stock " << stock << " " << nombre << endl;
     stock += cantidad;
     cout << "Compra realizada" << endl;
-    cout << "El nuevo stock para " << nombre << " es de: " << stock << endl;
+    cout << "El stock del medicamento " << nombre << " es de: " << stock << endl;
 }
 
-void Alimento::vender(int cantidad)
+void Medicamento::vender(int cantidad)
 {
     if(stock < cantidad)
     {
-        cout << "No hay suficiente stock para la cantidad de venta" << endl;
+        cout << "No hay suficiente Medicamento para la cantidad de venta" << endl;
     }
     else
     {

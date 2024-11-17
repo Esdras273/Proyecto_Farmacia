@@ -33,7 +33,7 @@ float Producto::getPrecio()
 
 void Producto::setPrecio(float precio)
 {
-    this -> precio=precio;
+    this -> precio = precio;
 }
 
 int Producto::getId()

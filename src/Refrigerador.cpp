@@ -5,9 +5,19 @@ Refrigerador::Refrigerador()
     //ctor
 }
 
-/*
-    cout << "El refrigerador " << numRefri << " es ahora el refrigerador" << nuevo << endl;
-    numRefrei = nuevo;
-*/
+void Refrigerador::cambiarOrden(int nuevo)
+{
+    cout << "El refrigerador " << numRefrigerador << " es ahora el refrigerador" << nuevo << endl;
+    numRefrigerador = nuevo;
+}
 
 //Getters y setters
+int Refrigerador::getNumRefrigerador()
+{
+    return numRefrigerador;
+}
+
+void Refrigerador::setNumRefrigerador(int numRefrigerador)
+{
+    this -> numRefrigerador = numRefrigerador;
+}

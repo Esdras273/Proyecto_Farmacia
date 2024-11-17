@@ -6,7 +6,7 @@
 #include "MetodoAlmacenamiento.h"
 using namespace std;
 
-class Almacen : MetodoAlmacenamiento
+class Almacen : public MetodoAlmacenamiento
 {
     private:
         int numEstanteria;
@@ -14,7 +14,12 @@ class Almacen : MetodoAlmacenamiento
     public:
         Almacen();      //Constructor
 
+        //Metodos propios
+        void cambiarOrden(int);
+
         //Getters y setters
+        int getNumEstanteria(void);
+        void setNumEstanteria(int);
 
 };
 

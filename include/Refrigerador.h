@@ -4,15 +4,24 @@
 #include<iostream>
 
 #include "MetodoAlmacenamiento.h"
+
 using namespace std;
 
-class Refrigerador : MetodoAlmacenamiento
+class Refrigerador : public MetodoAlmacenamiento
 {
     private:
         int numRefrigerador;
 
     public:
         Refrigerador();
+
+        //Metodos propios
+        void cambiarOrden(int);
+
+        //Getters y setters
+        int getNumRefrigerador(void);
+        void setNumRefrigerador(int);
+
 };
 
 #endif // REFRIGERADOR_H

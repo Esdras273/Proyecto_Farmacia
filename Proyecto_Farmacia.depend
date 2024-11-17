@@ -5,7 +5,7 @@
 	"Medicamento.h"
 	"Alimento.h"
 
-1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
+1731804244 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
 1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
@@ -77,33 +77,34 @@
 	"Producto.h"
 	"Almacen.h"
 
-1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\almacen.h
+1731805251 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\almacen.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
+1731805279 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
+	<iostream>
 
 1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
 	<iostream>
 	"Producto.h"
 	"Refrigerador.h"
 
-1731799914 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\refrigerador.h
+1731805384 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\refrigerador.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
 1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
-1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
+1731805088 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
-1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
+1731803390 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
-1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
+1731805116 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
 	"MetodoAlmacenamiento.h"
 
-1731799914 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\refrigerador.cpp
+1731803893 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\refrigerador.cpp
 	"Refrigerador.h"
 

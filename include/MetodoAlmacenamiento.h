@@ -1,6 +1,8 @@
 #ifndef METODOALMACENAMIENTO_H
 #define METODOALMACENAMIENTO_H
+#include <iostream>
 
+using namespace std;
 
 class MetodoAlmacenamiento
 {
@@ -11,8 +13,15 @@ class MetodoAlmacenamiento
     public:
         MetodoAlmacenamiento();     //Contructor
 
-        //Getters y setters
+        //Metodos propios
+        virtual void cambiarOrden(int);
 
+        //Getters y setters
+        int getSeccion(void);
+        void setSeccion(int);
+
+        bool getEnStock(void);
+        void setEnStock(int);
 
 };
 
