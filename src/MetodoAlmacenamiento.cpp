@@ -7,7 +7,7 @@ MetodoAlmacenamiento::MetodoAlmacenamiento()
 
 void MetodoAlmacenamiento::cambiarOrden(int nuevo)
 {
-    cout<<"El numero se modifico ha "<<nuevo<<endl;
+    cout<<"El numero se modifico ha " << nuevo << endl;
 }
 
 //Getters y setters

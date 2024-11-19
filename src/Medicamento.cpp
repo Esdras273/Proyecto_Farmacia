@@ -18,12 +18,12 @@ void Medicamento::vender(int cantidad)
 {
     if(stock < cantidad)
     {
-        cout << "No hay suficiente Medicamento para la cantidad de venta" << endl;
+        cout << "No hay suficiente Medicamento para la cantidad de venta de " << nombre << endl;
     }
     else
     {
         stock -= cantidad;
-        cout << "Venta realizada, quedan " << stock << " productos" << endl;
+        cout << "Venta realizada de " << nombre << ", quedan " << stock << " de medicina" << endl;
     }
 }
 

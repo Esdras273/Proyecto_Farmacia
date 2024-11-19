@@ -25,13 +25,13 @@
 	<iostream>
 	"Producto.h"
 
-1731794296 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\producto.cpp
+1731980093 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
 1731794547 d:\udg\tercer semestre\poo\proyecto_farmacia\include\producto.h
 	<iostream>
 
-1731794468 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
+1731980006 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
 1731794635 d:\udg\tercer semestre\poo\proyecto_farmacia\include\alimento.h
@@ -39,7 +39,7 @@
 	"Producto.h"
 	"Refrigerador.h"
 
-1731793748 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
+1731980022 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
 1731794650 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
@@ -47,28 +47,29 @@
 	"Producto.h"
 	"Almacen.h"
 
-1731708727 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+1731982120 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
 	<iostream>
 	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
 
-1731792863 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\almacen.cpp
+1731978538 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
-1731792832 d:\udg\tercer semestre\poo\proyecto_farmacia\include\almacen.h
+1731976419 d:\udg\tercer semestre\poo\proyecto_farmacia\include\almacen.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1731792633 d:\udg\tercer semestre\poo\proyecto_farmacia\include\metodoalmacenamiento.h
+1731976419 d:\udg\tercer semestre\poo\proyecto_farmacia\include\metodoalmacenamiento.h
+	<iostream>
 
-1731792859 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\metodoalmacenamiento.cpp
+1731978470 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\metodoalmacenamiento.cpp
 	"MetodoAlmacenamiento.h"
 
-1731792865 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\refrigerador.cpp
+1731976419 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\refrigerador.cpp
 	"Refrigerador.h"
 
-1731792815 d:\udg\tercer semestre\poo\proyecto_farmacia\include\refrigerador.h
+1731976419 d:\udg\tercer semestre\poo\proyecto_farmacia\include\refrigerador.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 

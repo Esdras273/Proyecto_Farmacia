@@ -7,7 +7,7 @@ Almacen::Almacen()
 
 void Almacen::cambiarOrden(int nuevo)
 {
-    cout << "La Estanteria " << numEstanteria << " es ahora la Estanteria " << nuevo << endl;
+    cout << "La estanteria " << numEstanteria << " es ahora la estanteria " << nuevo << endl;
     numEstanteria = nuevo;
 }
 
