@@ -1,8 +1,10 @@
 #include "Medicamento.h"
 
-Medicamento::Medicamento(float precio, int id, string nombre, int stock) : Producto(precio, id, nombre, stock)
+Medicamento::Medicamento(float precio, int id, string nombre, int stock, string tipoMedicamento, int dosis, string viaAdministracion) : Producto(precio, id, nombre, stock)
 {
-    //ctor
+    this -> tipoMedicamento = tipoMedicamento;
+    this -> dosis = dosis;
+    this -> viaAdministracion = viaAdministracion;
 }
 
 //Metodos propios de la clase

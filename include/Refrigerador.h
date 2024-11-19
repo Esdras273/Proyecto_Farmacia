@@ -13,7 +13,7 @@ class Refrigerador : public MetodoAlmacenamiento
         int numRefrigerador;
 
     public:
-        Refrigerador();
+        Refrigerador(int);
 
         //Metodos propios
         void cambiarOrden(int);

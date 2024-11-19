@@ -11,7 +11,7 @@ class MetodoAlmacenamiento
         bool enStock;
 
     public:
-        MetodoAlmacenamiento();     //Contructor
+        MetodoAlmacenamiento(int, bool);     //Contructor
 
         //Metodos propios
         virtual void cambiarOrden(int);

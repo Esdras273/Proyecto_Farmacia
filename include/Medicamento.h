@@ -17,7 +17,7 @@ class Medicamento : public Producto
         string viaAdministracion;
 
     public:
-        Medicamento(float, int, string, int);      //Constructor
+        Medicamento(float, int, string, int, string, int, string);      //Constructor
 
         //Metodos propios
         void comprar(int);

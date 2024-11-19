@@ -1,8 +1,8 @@
 #include "Refrigerador.h"
 
-Refrigerador::Refrigerador()
+Refrigerador::Refrigerador(int seccion, bool enStock. int numRefrigerador) : MetodoAlmacenamiento(seccion, enStock)
 {
-    //ctor
+    this -> numRefrigerador = numRefrigerador;
 }
 
 void Refrigerador::cambiarOrden(int nuevo)

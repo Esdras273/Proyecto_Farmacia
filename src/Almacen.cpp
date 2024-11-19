@@ -1,8 +1,8 @@
 #include "Almacen.h"
 
-Almacen::Almacen()
+Almacen::Almacen(int seccion, bool enStock, int numEstanteria) : MetodoAlmacenamiento(seccion, enStock)
 {
-    //ctor
+    this -> numEstanteria = numEstanteria;
 }
 
 void Almacen::cambiarOrden(int nuevo)

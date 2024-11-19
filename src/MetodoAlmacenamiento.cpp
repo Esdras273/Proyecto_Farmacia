@@ -1,8 +1,9 @@
 #include "MetodoAlmacenamiento.h"
 
-MetodoAlmacenamiento::MetodoAlmacenamiento()
+MetodoAlmacenamiento::MetodoAlmacenamiento(int seccion, bool enStock)
 {
-    //ctor
+    this -> seccion = seccion;
+    this -> enStock = enStock;
 }
 
 void MetodoAlmacenamiento::cambiarOrden(int nuevo)

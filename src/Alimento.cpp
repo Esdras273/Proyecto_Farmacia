@@ -1,8 +1,10 @@
 #include "Alimento.h"
 
-Alimento::Alimento(float precio, int id, string nombre, int stock) : Producto(precio, id, nombre, stock)
+Alimento::Alimento(float precio, int id, string nombre, int stock, string tipoAlimento, int cantidad, string contenidoNutricional) : Producto(precio, id, nombre, stock)
 {
-    //ctor
+    this -> tipoAlimento = tipoAlimento;
+    this -> cantidad = cantidad;
+    this-> contenidoNutricional = contenidoNutricional;
 }
 
 //Metodos propios de la clase

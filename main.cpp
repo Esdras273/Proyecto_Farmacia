@@ -8,8 +8,11 @@ using namespace std;
 
 int main()
 {
-    //Medicamento con parametros precio, id, nombre, nofga, igan, ignjaiga
-    Medicamento medi(10, 1, "Paracetamool", 15, "", "", 12378);
+    //Medicamento con parametros precio, id, nombre, stock, tipoMedicamento, dosis, viaAdministracion
+    Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
+
+    //Alimento con parametros precio, id, nombre, stock, tipoAlimento, cantidad, contenidoNutricional
+    Alimento alim(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas");
 
     int control = 0;
     char opcion = ' ';
