@@ -8,8 +8,13 @@ using namespace std;
 
 int main()
 {
+    //Medicamento con parametros precio, id, nombre, nofga, igan, ignjaiga
+    Medicamento medi(10, 1, "Paracetamool", 15, "", "", 12378);
+
     int control = 0;
-    int opcion = 0;
+    char opcion = ' ';
+
+    string validacion = " ";
 
     cout << "Bienvenido" << endl;
 
@@ -23,16 +28,18 @@ int main()
         cout << "4. Eliminar producto registrado" << endl;
         cout << "5. Salir" << endl;
 
-        cin >> opcion;
+        cin >> validacion;
+
+        opcion = validacion[0];
 
         switch(opcion)
         {
-            case 1:
+            case '1':
                 cout << "Lista de todos los productos disponibles" << endl;
 
                 break;
 
-            case 2:
+            case '2':
                 char eleccionProducto;
                 cout << "Que producto se va a registrar" << endl;
                 cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
@@ -42,7 +49,7 @@ int main()
                 }
                 else if(eleccionProducto == '2')
                 {
-                    cout << "Preoducto" << endl;
+                    cout << "Producto" << endl;
                 }
                 else
                 {
@@ -51,16 +58,16 @@ int main()
 
                 break;
 
-            case 3:
+            case '3':
                 cout << "Ingrese el ID del producto que quiera buscar" << endl;
 
                 break;
 
-            case 4:
+            case '4':
                 cout << "Ingrese el ID del producto que quiera eliminar" << endl;
                 break;
 
-            case 5:
+            case '5':
                 cout << "Gracias por usar" << endl;
                 control = 1;
                 break;

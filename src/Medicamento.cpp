@@ -1,6 +1,6 @@
 #include "Medicamento.h"
 
-Medicamento::Medicamento()
+Medicamento::Medicamento(float precio, int id, string nombre, int stock) : Producto(precio, id, nombre, stock)
 {
     //ctor
 }

@@ -18,7 +18,7 @@ class Alimento : public Producto
         string contenidoNutricional;
 
     public:
-        Alimento();     //Contructor
+        Alimento(float, int, string, int);     //Contructor
 
         //Metodos propios
         void comprar(int);

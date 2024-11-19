@@ -25,16 +25,16 @@
 	<iostream>
 	"Producto.h"
 
-1731980093 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\producto.cpp
+1732037814 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
-1731794547 d:\udg\tercer semestre\poo\proyecto_farmacia\include\producto.h
+1732037873 d:\udg\tercer semestre\poo\proyecto_farmacia\include\producto.h
 	<iostream>
 
 1731980006 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
-1731794635 d:\udg\tercer semestre\poo\proyecto_farmacia\include\alimento.h
+1732037992 d:\udg\tercer semestre\poo\proyecto_farmacia\include\alimento.h
 	<iostream>
 	"Producto.h"
 	"Refrigerador.h"
@@ -42,12 +42,12 @@
 1731980022 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
-1731794650 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
+1732038012 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
 	<iostream>
 	"Producto.h"
 	"Almacen.h"
 
-1731982120 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+1732037850 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
 	<iostream>
 	"Producto.h"
 	"Medicamento.h"

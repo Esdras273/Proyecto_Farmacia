@@ -1,6 +1,6 @@
 #include "Alimento.h"
 
-Alimento::Alimento()
+Alimento::Alimento(float precio, int id, string nombre, int stock) : Producto(precio, id, nombre, stock)
 {
     //ctor
 }

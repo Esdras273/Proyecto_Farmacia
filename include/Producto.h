@@ -13,7 +13,7 @@ class Producto
     int stock;
 
     public:
-    Producto();     //Contructor
+    Producto(float, int, string, int);     //Contructor
 
     //Metodos propios
     virtual void comprar(int);

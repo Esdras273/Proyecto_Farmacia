@@ -1,8 +1,11 @@
 #include "Producto.h"
 
-Producto::Producto()
+Producto::Producto(float precio, int id, string nombre, int stock)
 {
-
+    this -> precio = precio;
+    this -> id = id;
+    this -> nombre = nombre;
+    this -> stock = stock;
 }
 
 //Metodos propios de la clase
