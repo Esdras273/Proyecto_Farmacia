@@ -29,6 +29,11 @@ void Alimento::vender(int cantidad)
     }
 }
 
+void Alimento::mostrar()
+{
+    cout<<"Precio:"<< precio <<" ID:"<< id <<" Nombre:"<< nombre <<" Stock:"<< stock <<" TipoAlimento:"<< tipoAlimento <<" Cantidad:"<< cantidad <<" Nontenido Nutricional:"<< contenidoNutricional <<endl;
+}
+
 //Getters y setters
 string Alimento::getTipoAlimento()
 {

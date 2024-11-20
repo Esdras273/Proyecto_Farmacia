@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #include "Producto.h"
 #include "Medicamento.h"
@@ -8,11 +9,14 @@ using namespace std;
 
 int main()
 {
+    vector<Alimento*> alimento;
+
     //Medicamento con parametros precio, id, nombre, stock, tipoMedicamento, dosis, viaAdministracion
     Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
 
     //Alimento con parametros precio, id, nombre, stock, tipoAlimento, cantidad, contenidoNutricional
-    Alimento alim(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas");
+    //Alimento alim(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas");
+    alimento.push_back(new Alimento(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas"));
 
     int control = 0;
     char opcion = ' ';
@@ -39,7 +43,9 @@ int main()
         {
             case '1':
                 cout << "Lista de todos los productos disponibles" << endl;
-
+                for(const auto& ali : alimento) {
+                ali->mostrar();
+                }
                 break;
 
             case '2':

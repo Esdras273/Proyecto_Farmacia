@@ -1,6 +1,6 @@
 #include "Refrigerador.h"
 
-Refrigerador::Refrigerador(int seccion, bool enStock. int numRefrigerador) : MetodoAlmacenamiento(seccion, enStock)
+Refrigerador::Refrigerador(int seccion, bool enStock, int numRefrigerador) : MetodoAlmacenamiento(seccion, enStock)
 {
     this -> numRefrigerador = numRefrigerador;
 }

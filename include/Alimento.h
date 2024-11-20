@@ -23,6 +23,7 @@ class Alimento : public Producto
         //Metodos propios
         void comprar(int);
         void vender(int);
+        void mostrar();
 
         //Getters y setters
         Refrigerador *getRefrigerador(){ return refrigerador;};

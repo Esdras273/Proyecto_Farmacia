@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1732039513 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1732130962 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
+	<vector>
 	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
 
-1732038959 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
+1732130205 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
 1732038959 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
@@ -78,34 +79,34 @@
 	"Producto.h"
 	"Almacen.h"
 
-1731805251 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\almacen.h
+1732128893 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\almacen.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1731805279 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
+1732040012 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
 	<iostream>
 
-1732039096 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
+1732130048 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
 	<iostream>
 	"Producto.h"
 	"Refrigerador.h"
 
-1731805384 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\refrigerador.h
+1732128907 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\refrigerador.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732039268 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
+1732130270 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
-1731982686 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
+1732040191 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
 1732039368 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
-1731982686 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
+1732040065 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
 	"MetodoAlmacenamiento.h"
 
-1731805362 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\refrigerador.cpp
+1732128331 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\refrigerador.cpp
 	"Refrigerador.h"
 

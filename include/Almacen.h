@@ -12,7 +12,7 @@ class Almacen : public MetodoAlmacenamiento
         int numEstanteria;
 
     public:
-        Almacen(int);      //Constructor
+        Almacen(int, bool, int);      //Constructor
 
         //Metodos propios
         void cambiarOrden(int);
