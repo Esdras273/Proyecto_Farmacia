@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+    //Vectores donde guardaremos referencias a objetos de cada tipo
     vector<Alimento*> alimento;
     vector<Medicamento*> medica;
 
@@ -16,13 +17,16 @@ int main()
     //Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
 
 
-
     //Alimento con parametros precio, id, nombre, stock, tipoAlimento, cantidad, contenidoNutricional
-    //Alimento alim(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas");
+    Alimento *ali1 = new Alimento(59.60, 01, "Maruchan", 30, "comida", 50, "5 de grasas");
+    Alimento *ali2 = new Alimento(60.00, 02, "Gatorade", 8, "bebida", 500, "20 de azucar");
+    Alimento *ali3 = new Alimento(19.99, 03, "Carlos V", 22, "chocolate", 75, "exceso de azucar");
 
-    //Primera prueba
-    alimento.push_back(new Alimento(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas"));
-    //Prueba 2
+    //Agregamos los alimentos al vector "alimento"
+    alimento.push_back(ali1);
+    alimento.push_back(ali2);
+    alimento.push_back(ali3);
+
     medica.push_back(new Medicamento(10, 1, "Paracetamool", 15, "A", 12378,"Oral"));
     //si quieres hacer otro vector, tal cual copia el codigo nomas cambia lo que quieres que diga
 
@@ -51,18 +55,20 @@ int main()
         {
             case '1':
                 cout << "Lista de todos los productos disponibles" << endl;
-                for(const auto& ali : alimento) {
-                ali->mostrar();
+
+                for(int i = 0; i < alimento.size(); i++)
+                {
+                    alimento[i]->mostrar();
                 }
-                for(const auto& med : medica) {
-                med->mostrar();
-                }
+
                 break;
 
             case '2':
                 char eleccionProducto;
                 cout << "Que producto se va a registrar" << endl;
                 cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
+                cin >> eleccionProducto;
+
                 if(eleccionProducto == '1')
                 {
                     cout << "Medicamento" << endl;
@@ -100,3 +106,4 @@ int main()
 
     return 0;
 }
+
