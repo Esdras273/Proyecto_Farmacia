@@ -9,7 +9,7 @@
 1732130205 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"
 
-1732038959 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
+1732154890 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\producto.h
 	<iostream>
 
 1731610693 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\medicamento.cpp
@@ -74,7 +74,7 @@
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732039297 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\medicamento.h
+1732154927 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\medicamento.h
 	<iostream>
 	"Producto.h"
 	"Almacen.h"
@@ -95,13 +95,13 @@
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732130270 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
+1732155105 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
 1732040191 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
-1732039368 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
+1732155094 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
 1732040065 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp

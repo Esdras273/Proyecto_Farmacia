@@ -10,13 +10,21 @@ using namespace std;
 int main()
 {
     vector<Alimento*> alimento;
+    vector<Medicamento*> medica;
 
     //Medicamento con parametros precio, id, nombre, stock, tipoMedicamento, dosis, viaAdministracion
-    Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
+    //Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
+
+
 
     //Alimento con parametros precio, id, nombre, stock, tipoAlimento, cantidad, contenidoNutricional
     //Alimento alim(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas");
+
+    //Primera prueba
     alimento.push_back(new Alimento(59.60, 02, "Maruchan", 30, "comida", 50, "5 de Grasas"));
+    //Prueba 2
+    medica.push_back(new Medicamento(10, 1, "Paracetamool", 15, "A", 12378,"Oral"));
+    //si quieres hacer otro vector, tal cual copia el codigo nomas cambia lo que quieres que diga
 
     int control = 0;
     char opcion = ' ';
@@ -45,6 +53,9 @@ int main()
                 cout << "Lista de todos los productos disponibles" << endl;
                 for(const auto& ali : alimento) {
                 ali->mostrar();
+                }
+                for(const auto& med : medica) {
+                med->mostrar();
                 }
                 break;
 
