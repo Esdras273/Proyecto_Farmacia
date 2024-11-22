@@ -7,6 +7,10 @@
 
 using namespace std;
 
+//Funciones
+void mostrarVectorAlimento(const vector<Alimento*>&);
+void mostrarVectorMedicamento(const vector<Medicamento*>&);
+
 int main()
 {
     //Vectores donde guardaremos referencias a objetos de cada tipo
@@ -14,7 +18,9 @@ int main()
     vector<Medicamento*> medica;
 
     //Medicamento con parametros precio, id, nombre, stock, tipoMedicamento, dosis, viaAdministracion
-    //Medicamento medi(10, 1, "Paracetamool", 15, "", 12378,"Oral");
+    Medicamento *med1 = new Medicamento(10.5, 1, "Paracetamol", 15, "Analgésico", 500, "Oral");
+    Medicamento *med2 = new Medicamento(15.0, 2, "Ibuprofeno", 20, "Antiinflamatorio", 400, "Oral");
+    Medicamento *med3 = new Medicamento(12.5, 3, "Aspirina", 30, "Analgésico", 500, "Oral");
 
 
     //Alimento con parametros precio, id, nombre, stock, tipoAlimento, cantidad, contenidoNutricional
@@ -27,7 +33,9 @@ int main()
     alimento.push_back(ali2);
     alimento.push_back(ali3);
 
-    medica.push_back(new Medicamento(10, 1, "Paracetamool", 15, "A", 12378,"Oral"));
+    medica.push_back(med1);
+    medica.push_back(med2);
+    medica.push_back(med3);
     //si quieres hacer otro vector, tal cual copia el codigo nomas cambia lo que quieres que diga
 
     int control = 0;
@@ -56,10 +64,10 @@ int main()
             case '1':
                 cout << "Lista de todos los productos disponibles" << endl;
 
-                for(int i = 0; i < alimento.size(); i++)
-                {
-                    alimento[i]->mostrar();
-                }
+                mostrarVectorAlimento(alimento);
+                cout << "\n";
+                mostrarVectorMedicamento(medica);
+                cout << "\n";
 
                 break;
 
@@ -75,7 +83,7 @@ int main()
                 }
                 else if(eleccionProducto == '2')
                 {
-                    cout << "Producto" << endl;
+                    cout << "Alimento" << endl;
                 }
                 else
                 {
@@ -107,3 +115,26 @@ int main()
     return 0;
 }
 
+void mostrarVectorAlimento(const vector<Alimento*>& vec)
+{
+    cout << "--------------------------------------------------------------" << endl;
+    cout << " ID | Precio | Nombre | Stock |Contenido Nutricional| Cantidad" << endl;
+    cout << "--------------------------------------------------------------" << endl;
+
+    for(size_t i = 0; i < vec.size(); i++)
+    {
+        cout << *vec[i];
+    }
+}
+
+void mostrarVectorMedicamento(const vector<Medicamento*>& vec)
+{
+    cout << "---------------------------------------------------------------------------" << endl;
+    cout << " ID | Precio | Nombre | Stock |Tipo Medicamento| Dosis | Via Administracion" << endl;
+    cout << "---------------------------------------------------------------------------" << endl;
+
+    for(size_t i = 0; i < vec.size(); i++)
+    {
+        cout << *vec[i];
+    }
+}

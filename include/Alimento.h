@@ -38,6 +38,10 @@ class Alimento : public Producto
         string getContenidoNutricional();
         void setContenidoNutricional(string);
 
+        //Sobrecarga de operadores de flujo
+        friend ostream& operator<<(ostream&, const Alimento&);
+
+
 };
 
 #endif // ALIMENTO_H

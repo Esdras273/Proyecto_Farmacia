@@ -64,3 +64,12 @@ void Medicamento::setViaAdministracion(string viaAdministracion)
 {
     this -> viaAdministracion = viaAdministracion;
 }
+
+//Sobrecarga de operadores de flujo
+ostream& operator<<(ostream &salida, const Medicamento &obj)
+{
+    // ID | Precio | Nombre | Stock |Tipo Medicamento| Dosis | Via Administracion
+    salida << obj.id << "   -    " << obj.precio << "   -   " << obj.nombre << "   -    " << obj.stock << "   - " << obj.tipoMedicamento << "   -  "
+    << obj.dosis << "   -  " << obj.viaAdministracion << endl;
+    return salida;
+}

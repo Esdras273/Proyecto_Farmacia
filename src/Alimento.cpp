@@ -65,3 +65,11 @@ void Alimento::setContenidoNutricional(string contenidoNutricional)
 {
     this -> contenidoNutricional = contenidoNutricional;
 }
+
+//Sobrecarga de operadores
+ostream& operator<<(ostream &salida, const Alimento &obj)
+{
+    //ID    |   Precio    |   Nombre   |   Stock   | Contenido Nutricional |   Cantidad
+    salida << obj.id << "   -    " << obj.precio << "   -   " << obj.nombre << "   -    " << obj.stock << "   - " << obj.contenidoNutricional << "   -  " << obj.cantidad <<endl;
+    return salida;
+}

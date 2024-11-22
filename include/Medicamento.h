@@ -37,6 +37,9 @@ class Medicamento : public Producto
         string getViaAdministracion();
         void setViaAdministracion(string);
 
+        //Sobrecarga de operadores de flujo
+        friend ostream& operator<<(ostream&, const Medicamento&);
+
 };
 
 #endif // MEDICAMENTO_H
