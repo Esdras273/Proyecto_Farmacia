@@ -7,9 +7,11 @@
 
 using namespace std;
 
-//Funciones
+//Protoripo de las funciones
 void mostrarVectorAlimento(const vector<Alimento*>&);
 void mostrarVectorMedicamento(const vector<Medicamento*>&);
+
+void agregarAlimento(vector<Alimento*>&);
 
 int main()
 {
@@ -33,15 +35,15 @@ int main()
     alimento.push_back(ali2);
     alimento.push_back(ali3);
 
+    //Agregamos los medicamentos al vector "medica"
     medica.push_back(med1);
     medica.push_back(med2);
     medica.push_back(med3);
-    //si quieres hacer otro vector, tal cual copia el codigo nomas cambia lo que quieres que diga
 
+    //Variables para controlar el menu
     int control = 0;
     char opcion = ' ';
-
-    string validacion = " ";
+    string validacion = " ";    //Con esto evitamos un mal uso del menu
 
     cout << "Bienvenido" << endl;
 
@@ -57,7 +59,7 @@ int main()
 
         cin >> validacion;
 
-        opcion = validacion[0];
+        opcion = validacion[0];     //Solo tomamos en cuenta el primer caracter para evitar resultados inesperados
 
         switch(opcion)
         {
@@ -137,4 +139,11 @@ void mostrarVectorMedicamento(const vector<Medicamento*>& vec)
     {
         cout << *vec[i];
     }
+}
+
+void agregarAlimento(vector<Alimento*>& alimento) {
+    //Alimento* nuevoAlimento = new Alimento();
+    //cin >> *nuevoAlimento;      // Usa la sobrecarga del operador >>
+    //alimento.push_back(nuevoAlimento);
+    cout << "Alimento agregado correctamente." << endl;
 }
