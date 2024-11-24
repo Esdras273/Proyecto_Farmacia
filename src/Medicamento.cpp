@@ -73,3 +73,23 @@ ostream& operator<<(ostream &salida, const Medicamento &obj)
     << obj.dosis << "   -  " << obj.viaAdministracion << endl;
     return salida;
 }
+
+bool Medicamento::operator==(const Medicamento& otro)const
+{
+    return precio == otro.precio;
+}
+
+bool operator!=(const Medicamento& c1, const Medicamento& c2)
+{
+    return !(c1 == c2);
+}
+
+bool operator<(const Medicamento& c1, const Medicamento& c2)
+{
+     return c1.precio < c2.precio;
+}
+
+bool operator>(const Medicamento& c1, const Medicamento& c2)
+{
+    return c2 < c1;
+}

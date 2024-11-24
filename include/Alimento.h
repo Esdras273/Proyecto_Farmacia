@@ -38,6 +38,12 @@ class Alimento : public Producto
         string getContenidoNutricional();
         void setContenidoNutricional(string);
 
+        //Sobrecargas de operadores
+        bool operator==(const Alimento& otro) const;
+        friend bool operator!=(const Alimento& c1, const Alimento& c2);
+        friend bool operator<(const Alimento& c1, const Alimento& c2);
+        friend bool operator>(const Alimento& c1, const Alimento& c2);
+
         //Sobrecarga de operadores de flujo
         friend ostream& operator<<(ostream&, const Alimento&);
 

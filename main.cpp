@@ -55,7 +55,8 @@ int main()
         cout << "2. Dar de alta un nuevo producto" << endl;
         cout << "3. Buscar producto" << endl;
         cout << "4. Eliminar producto registrado" << endl;
-        cout << "5. Salir" << endl;
+        cout << "5. Comparacion de productos" << endl;
+        cout << "6. Salir" << endl;
 
         cin >> validacion;
 
@@ -104,6 +105,10 @@ int main()
                 break;
 
             case '5':
+                cout << "Gracias" << endl;
+                break;
+
+            case '6':
                 cout << "Gracias por usar" << endl;
                 control = 1;
                 break;

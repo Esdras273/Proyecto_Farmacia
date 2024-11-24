@@ -73,3 +73,23 @@ ostream& operator<<(ostream &salida, const Alimento &obj)
     salida << obj.id << "   -    " << obj.precio << "   -   " << obj.nombre << "   -    " << obj.stock << "   - " << obj.contenidoNutricional << "   -  " << obj.cantidad <<endl;
     return salida;
 }
+
+bool Alimento::operator==(const Alimento& otro)const
+{
+    return precio == otro.precio;
+}
+
+bool operator!=(const Alimento& c1, const Alimento& c2)
+{
+    return !(c1 == c2);
+}
+
+bool operator<(const Alimento& c1, const Alimento& c2)
+{
+     return c1.precio < c2.precio;
+}
+
+bool operator>(const Alimento& c1, const Alimento& c2)
+{
+    return c2 < c1;
+}

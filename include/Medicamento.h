@@ -37,6 +37,12 @@ class Medicamento : public Producto
         string getViaAdministracion();
         void setViaAdministracion(string);
 
+        //Sobrecargas de operadores
+        bool operator==(const Medicamento& otro) const;
+        friend bool operator!=(const Medicamento& c1, const Medicamento& c2);
+        friend bool operator<(const Medicamento& c1, const Medicamento& c2);
+        friend bool operator>(const Medicamento& c1, const Medicamento& c2);
+
         //Sobrecarga de operadores de flujo
         friend ostream& operator<<(ostream&, const Medicamento&);
 
