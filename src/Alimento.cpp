@@ -1,5 +1,12 @@
 #include "Alimento.h"
 
+Alimento::Alimento() : Producto(0, 0, "", 0)
+{
+    tipoAlimento = "";
+    cantidad = 0;
+    contenidoNutricional = "";
+}
+
 Alimento::Alimento(float precio, int id, string nombre, int stock, string tipoAlimento, int cantidad, string contenidoNutricional) : Producto(precio, id, nombre, stock)
 {
     this -> tipoAlimento = tipoAlimento;
@@ -72,6 +79,20 @@ ostream& operator<<(ostream &salida, const Alimento &obj)
     //ID    |   Precio    |   Nombre   |   Stock   | Contenido Nutricional |   Cantidad
     salida << obj.id << "   -    " << obj.precio << "   -   " << obj.nombre << "   -    " << obj.stock << "   - " << obj.contenidoNutricional << "   -  " << obj.cantidad <<endl;
     return salida;
+}
+
+Alimento Alimento::operator+(const Alimento &obj)
+{
+    Alimento aux;
+    aux.precio=precio+obj.precio;
+    return aux;
+}
+
+Alimento operator-(const Alimento &obj1, Alimento &obj2)
+{
+    Alimento aux;
+    aux.precio=obj1.precio-obj2.precio;
+    return aux;
 }
 
 bool Alimento::operator==(const Alimento& otro)const

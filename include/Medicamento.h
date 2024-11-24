@@ -17,6 +17,7 @@ class Medicamento : public Producto
         string viaAdministracion;
 
     public:
+        Medicamento();
         Medicamento(float, int, string, int, string, int, string);      //Constructor
 
         //Metodos propios
@@ -38,6 +39,8 @@ class Medicamento : public Producto
         void setViaAdministracion(string);
 
         //Sobrecargas de operadores
+        Medicamento operator +(const Medicamento&);
+        friend Medicamento operator -(const Medicamento&,Medicamento&);
         bool operator==(const Medicamento& otro) const;
         friend bool operator!=(const Medicamento& c1, const Medicamento& c2);
         friend bool operator<(const Medicamento& c1, const Medicamento& c2);

@@ -18,6 +18,7 @@ class Alimento : public Producto
         string contenidoNutricional;
 
     public:
+        Alimento();
         Alimento(float, int, string, int, string, int, string);     //Contructor
 
         //Metodos propios
@@ -39,6 +40,9 @@ class Alimento : public Producto
         void setContenidoNutricional(string);
 
         //Sobrecargas de operadores
+        Alimento operator +(const Alimento&);
+        friend Alimento operator -(const Alimento&, Alimento&);
+
         bool operator==(const Alimento& otro) const;
         friend bool operator!=(const Alimento& c1, const Alimento& c2);
         friend bool operator<(const Alimento& c1, const Alimento& c2);

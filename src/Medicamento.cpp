@@ -1,5 +1,12 @@
 #include "Medicamento.h"
 
+Medicamento::Medicamento() : Producto(0, 0, "", 0)
+{
+    tipoMedicamento = "";
+    dosis = 0;
+    viaAdministracion = "";
+}
+
 Medicamento::Medicamento(float precio, int id, string nombre, int stock, string tipoMedicamento, int dosis, string viaAdministracion) : Producto(precio, id, nombre, stock)
 {
     this -> tipoMedicamento = tipoMedicamento;
@@ -72,6 +79,20 @@ ostream& operator<<(ostream &salida, const Medicamento &obj)
     salida << obj.id << "   -    " << obj.precio << "   -   " << obj.nombre << "   -    " << obj.stock << "   - " << obj.tipoMedicamento << "   -  "
     << obj.dosis << "   -  " << obj.viaAdministracion << endl;
     return salida;
+}
+
+Medicamento Medicamento ::operator+(const Medicamento &obj)
+{
+    Medicamento aux;
+    aux.precio=precio+obj.precio;
+    return aux;
+}
+
+Medicamento operator-(const Medicamento &obj1, Medicamento &obj2)
+{
+    Medicamento aux;
+    aux.precio=obj1.precio-obj2.precio;
+    return aux;
 }
 
 bool Medicamento::operator==(const Medicamento& otro)const
