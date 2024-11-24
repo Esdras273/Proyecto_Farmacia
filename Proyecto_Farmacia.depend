@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1732412354 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1732482246 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
 	"Producto.h"
@@ -96,7 +96,7 @@
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732423452 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
+1732482092 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
 1732040191 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp

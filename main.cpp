@@ -105,7 +105,52 @@ int main()
                 break;
 
             case '5':
-                cout << "Gracias" << endl;
+                cout << "--Comparacion de los precios en el producto de Alimentos\n" << endl;
+                cout << "La suma del primer y segundo producto es " << (*ali1 + *ali2).getPrecio() << endl;
+                cout << "La resta del  segundo y tercer producto es " << (*ali2 - *ali3).getPrecio() << endl;
+                if(*ali1 == *ali2)
+                {
+                    cout << "El primer y segundo producto tiene el mismo precio" << endl;
+                }else
+                {
+                    cout << "El primer y segundo producto NO tienen el mismo precio" << endl;
+                }
+                if (*ali1 != *ali3)
+                {
+                    cout << "El producto 1 y el producto 3 tiene diferentes precios" << endl;
+                }else{
+                    cout << "El producto 1 y el producto 3 tiene el mismo precio" << endl;
+                }
+                if (*ali3 < *ali1)
+                {
+                    cout << "El producto 3 tiene un precio menor que el producto 1" << endl;
+                }else if(*ali3 > *ali1){
+                    cout << "El producto 3 tiene un precio mayor que el producto 1" << endl;
+                }
+
+                cout << "\n--Comparacion de los precios en el producto de Medicamentos\n" << endl;
+                cout << "La suma del primer y segundo producto es " << (*med1 + *med2).getPrecio() << endl;
+                cout << "La resta del  segundo y tercer producto es " << (*med2 - *med3).getPrecio() << endl;
+                if(*med1 == *med3){
+                    cout << "El primer y tercer producto tiene el mismo precio" << endl;
+                }else{
+                    cout << "El primer y tercer producto NO tienen el mismo precio" << endl;
+                }
+                if (*med1 != *med2)
+                {
+                    cout << "El producto 1 y el producto 2 tiene diferentes precios" << endl;
+                }else{
+                    cout << "El producto 1 y el producto 2 tiene el mismo precio" << endl;
+                }
+                if (*med2 < *med3)
+                {
+                    cout << "El producto 2 tiene un precio menor que el producto 3" << endl;
+                }else if(*med2 > *med3){
+                    cout << "El producto 2 tiene un precio mayor que el producto 3" << endl;
+                }
+
+                cout<<"\n"<<endl;
+
                 break;
 
             case '6':

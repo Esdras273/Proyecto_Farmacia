@@ -84,7 +84,7 @@ ostream& operator<<(ostream &salida, const Alimento &obj)
 Alimento Alimento::operator+(const Alimento &obj)
 {
     Alimento aux;
-    aux.precio=precio+obj.precio;
+    aux.precio = this-> precio + obj.precio;
     return aux;
 }
 
