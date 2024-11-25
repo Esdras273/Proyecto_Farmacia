@@ -28,6 +28,8 @@ bool buscarMedicina(vector<Medicamento*>&, int);
 bool eliminarAlimento(vector<Alimento*>&, int);
 bool eliminarMedicina(vector<Medicamento*>&, int);
 
+void comprobarID(vector<Alimento*>&);
+
 int main()
 {
     //Vectores donde guardaremos referencias a objetos de cada tipo
@@ -109,11 +111,13 @@ int main()
                 else if(eleccionProducto == '2')
                 {
                     agregarAlimento(alimento);
+                    comprobarID(alimento);
                 }
                 else
                 {
                     cout << "Regresando al menu" << endl;
                 }
+
 
                 break;
 
@@ -373,4 +377,17 @@ bool eliminarMedicina(vector<Medicamento*> &medicinas, int id) {
         }
     }
     return false;
+}
+
+void comprobarID(vector<Alimento*>& alimento) {
+    for(size_t i = 0; i < alimento.size(); i++)
+    {
+        for(size_t j = 0; j < alimento.size(); j++)
+        {
+            if(i != j && (alimento[i]->getId()) == (alimento[j]->getId()))
+               {
+                   alimento[j]->setId(alimento[j]->getId() + 1);
+               }
+        }
+    }
 }
