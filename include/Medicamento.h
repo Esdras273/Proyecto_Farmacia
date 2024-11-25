@@ -48,6 +48,7 @@ class Medicamento : public Producto
 
         //Sobrecarga de operadores de flujo
         friend ostream& operator<<(ostream&, const Medicamento&);
+        friend istream& operator>>(istream&, Medicamento&);
 
 };
 

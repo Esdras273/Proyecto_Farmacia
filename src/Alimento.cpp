@@ -81,6 +81,26 @@ ostream& operator<<(ostream &salida, const Alimento &obj)
     return salida;
 }
 
+istream& operator>>(istream &entrada, Alimento &obj)
+{
+    cout << "Introduce el nombre del alimento: ";
+        entrada >> obj.nombre;
+        cout << "Introduce el precio: ";
+        entrada >> obj.precio;
+        cout << "Introduce el ID: ";
+        entrada >> obj.id;
+        cout << "Introduce el stock: ";
+        entrada >> obj.stock;
+        cout << "Introduce el tipo de alimento: ";
+        entrada >> obj.tipoAlimento;
+        cout << "Introduce la cantidad: ";
+        entrada >> obj.cantidad;
+        cout << "Introduce el contenido nutricional: ";
+        entrada >> obj.contenidoNutricional;
+
+        return entrada;
+}
+
 Alimento Alimento::operator+(const Alimento &obj)
 {
     Alimento aux;

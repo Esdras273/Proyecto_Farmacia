@@ -50,6 +50,7 @@ class Alimento : public Producto
 
         //Sobrecarga de operadores de flujo
         friend ostream& operator<<(ostream&, const Alimento&);
+        friend istream& operator>>(istream&, Alimento&);
 
 
 };

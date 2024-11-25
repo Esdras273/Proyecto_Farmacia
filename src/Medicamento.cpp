@@ -81,6 +81,26 @@ ostream& operator<<(ostream &salida, const Medicamento &obj)
     return salida;
 }
 
+istream& operator>>(istream &entrada, Medicamento &obj)
+{
+    cout << "Introduce el nombre del medicamento: ";
+        entrada >> obj.nombre;
+        cout << "Introduce el precio: ";
+        entrada >> obj.precio;
+        cout << "Introduce el ID: ";
+        entrada >> obj.id;
+        cout << "Introduce el stock: ";
+        entrada >> obj.stock;
+        cout << "Introduce el tipo de medicamento: ";
+        entrada >> obj.tipoMedicamento;
+        cout << "Introduce la dosis: ";
+        entrada >> obj.dosis;
+        cout << "Introduce la via de administracion: ";
+        entrada >> obj.viaAdministracion;
+
+        return entrada;
+}
+
 Medicamento Medicamento ::operator+(const Medicamento &obj)
 {
     Medicamento aux;

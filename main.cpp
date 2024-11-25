@@ -12,6 +12,13 @@ void mostrarVectorAlimento(const vector<Alimento*>&);
 void mostrarVectorMedicamento(const vector<Medicamento*>&);
 
 void agregarAlimento(vector<Alimento*>&);
+void agregarMedicina(vector<Medicamento*>&);
+
+bool buscarAlimento(vector<Alimento*>&, int);
+bool buscarMedicina(vector<Medicamento*>&, int);
+
+bool eliminarAlimento(vector<Alimento*>&, int);
+bool eliminarMedicina(vector<Medicamento*>&, int);
 
 int main()
 {
@@ -44,6 +51,8 @@ int main()
     int control = 0;
     char opcion = ' ';
     string validacion = " ";    //Con esto evitamos un mal uso del menu
+    char eleccionProducto;      //Variable para seleccion dentro de las opciones 2, 3 y 4
+    int id;                     //id para buscar entre los productos
 
     cout << "Bienvenido" << endl;
 
@@ -75,18 +84,18 @@ int main()
                 break;
 
             case '2':
-                char eleccionProducto;
+                eleccionProducto = ' ';
                 cout << "Que producto se va a registrar" << endl;
                 cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
                 cin >> eleccionProducto;
 
                 if(eleccionProducto == '1')
                 {
-                    cout << "Medicamento" << endl;
+                    agregarMedicina(medica);
                 }
                 else if(eleccionProducto == '2')
                 {
-                    cout << "Alimento" << endl;
+                    agregarAlimento(alimento);
                 }
                 else
                 {
@@ -96,12 +105,63 @@ int main()
                 break;
 
             case '3':
+                eleccionProducto = ' ';
+                cout << "Que producto se va a buscar" << endl;
+                cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
+                cin >> eleccionProducto;
+
                 cout << "Ingrese el ID del producto que quiera buscar" << endl;
+                cin >> id;
+
+                if(eleccionProducto == '1')
+                {
+                    if(!buscarMedicina(medica, id))
+                    {
+                        cout << "Medicamento no encontrado" << endl;
+                    }
+                }
+                else if(eleccionProducto == '2')
+                {
+                    if(!buscarAlimento(alimento, id))
+                    {
+                        cout << "Alimento no encontrado" << endl;
+                    }
+                }
+                else
+                {
+                    cout << "Regresando al menu" << endl;
+                }
 
                 break;
 
             case '4':
+                eleccionProducto = ' ';
+                cout << "Que producto se va a buscar" << endl;
+                cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
+                cin >> eleccionProducto;
+
                 cout << "Ingrese el ID del producto que quiera eliminar" << endl;
+                cin >> id;
+
+                if(eleccionProducto == '1')
+                {
+                    if(!eliminarMedicina(medica, id))
+                    {
+                        cout << "Medicamento no encontrado" << endl;
+                    }
+                }
+                else if(eleccionProducto == '2')
+                {
+                    if(!eliminarAlimento(alimento, id))
+                    {
+                        cout << "Alimento no encontrado" << endl;
+                    }
+                }
+                else
+                {
+                    cout << "Regresando al menu" << endl;
+                }
+
                 break;
 
             case '5':
@@ -192,8 +252,86 @@ void mostrarVectorMedicamento(const vector<Medicamento*>& vec)
 }
 
 void agregarAlimento(vector<Alimento*>& alimento) {
-    //Alimento* nuevoAlimento = new Alimento();
-    //cin >> *nuevoAlimento;      // Usa la sobrecarga del operador >>
-    //alimento.push_back(nuevoAlimento);
+    Alimento* nuevoAlimento = new Alimento();
+    cin >> *nuevoAlimento;      // Uso de la sobrecarga del operador >>
+    alimento.push_back(nuevoAlimento);
     cout << "Alimento agregado correctamente." << endl;
+}
+
+void agregarMedicina(vector<Medicamento*>& medicamento)
+{
+    Medicamento* nuevaMedicina = new Medicamento();
+    cin >> *nuevaMedicina;      // Uso de la sobrecarga del operador >>
+    medicamento.push_back(nuevaMedicina);
+    cout << "Medicina agregada correctamente." << endl;
+}
+
+bool buscarAlimento(vector<Alimento*> &alimentos, int id) {
+    for(size_t i = 0; i < alimentos.size(); i++)
+    {
+        if (alimentos[i]->getId() == id)
+        {
+            cout << *alimentos[i];
+            return true;
+        }
+    }
+    return false;
+}
+
+bool buscarMedicina(vector<Medicamento*> &medicinas, int id) {
+    for(size_t i = 0; i < medicinas.size(); i++)
+    {
+        if (medicinas[i]->getId() == id)
+        {
+            cout << *medicinas[i];
+            return true;
+        }
+    }
+    return false;
+}
+
+bool eliminarAlimento(vector<Alimento*> &alimentos, int id) {
+    int confirmacion = 0;
+
+    for(size_t i = 0; i < alimentos.size(); i++)
+    {
+        if (alimentos[i]->getId() == id)
+        {
+            cout << *alimentos[i];
+            cout << "Esta seguro que quiere eliminar este alimento? \n1-Si\n2-No" << endl;
+            cin >> confirmacion;
+
+            if(confirmacion == 1)
+            {
+                delete alimentos[i];                       // Liberar memoria del objeto
+                alimentos.erase(alimentos.begin() + i);       // Eliminar el puntero del vector
+                return true;
+            }
+
+        }
+    }
+    return false;
+}
+
+bool eliminarMedicina(vector<Medicamento*> &medicinas, int id) {
+    int confirmacion = 0;
+
+    for(size_t i = 0; i < medicinas.size(); i++)
+    {
+        if (medicinas[i]->getId() == id)
+        {
+            cout << *medicinas[i];
+            cout << "Esta seguro que quiere eliminar este medicamento? \n1-Si\n2-No" << endl;
+            cin >> confirmacion;
+
+            if(confirmacion == 1)
+            {
+                delete medicinas[i];                       // Liberar memoria del objeto
+                medicinas.erase(medicinas.begin() + i);       // Eliminar el puntero del vector
+                return true;
+            }
+
+        }
+    }
+    return false;
 }
