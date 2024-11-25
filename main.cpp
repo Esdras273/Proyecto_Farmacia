@@ -11,6 +11,9 @@ using namespace std;
 void mostrarVectorAlimento(const vector<Alimento*>&);
 void mostrarVectorMedicamento(const vector<Medicamento*>&);
 
+void cabeceraAlimento();
+void cabeceraMedicamento();
+
 void agregarAlimento(vector<Alimento*>&);
 void agregarMedicina(vector<Medicamento*>&);
 
@@ -229,9 +232,7 @@ int main()
 
 void mostrarVectorAlimento(const vector<Alimento*>& vec)
 {
-    cout << "--------------------------------------------------------------" << endl;
-    cout << " ID | Precio | Nombre | Stock |Contenido Nutricional| Cantidad" << endl;
-    cout << "--------------------------------------------------------------" << endl;
+    cabeceraAlimento();
 
     for(size_t i = 0; i < vec.size(); i++)
     {
@@ -241,14 +242,26 @@ void mostrarVectorAlimento(const vector<Alimento*>& vec)
 
 void mostrarVectorMedicamento(const vector<Medicamento*>& vec)
 {
-    cout << "---------------------------------------------------------------------------" << endl;
-    cout << " ID | Precio | Nombre | Stock |Tipo Medicamento| Dosis | Via Administracion" << endl;
-    cout << "---------------------------------------------------------------------------" << endl;
+    cabeceraMedicamento();
 
     for(size_t i = 0; i < vec.size(); i++)
     {
         cout << *vec[i];
     }
+}
+
+void cabeceraAlimento()
+{
+    cout << "--------------------------------------------------------------" << endl;
+    cout << " ID | Precio | Nombre | Stock |Contenido Nutricional| Cantidad" << endl;
+    cout << "--------------------------------------------------------------" << endl;
+}
+
+void cabeceraMedicamento()
+{
+    cout << "---------------------------------------------------------------------------" << endl;
+    cout << " ID | Precio | Nombre | Stock |Tipo Medicamento| Dosis | Via Administracion" << endl;
+    cout << "---------------------------------------------------------------------------" << endl;
 }
 
 void agregarAlimento(vector<Alimento*>& alimento) {

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1732482246 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1732557411 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
 	"Producto.h"
@@ -75,7 +75,7 @@
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732423368 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\medicamento.h
+1732555205 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\medicamento.h
 	<iostream>
 	"Producto.h"
 	"Almacen.h"
@@ -87,7 +87,7 @@
 1732040012 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\metodoalmacenamiento.h
 	<iostream>
 
-1732423368 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
+1732555205 c:\users\pepea\onedrive\escritorio\proyecto_farmacia\include\alimento.h
 	<iostream>
 	"Producto.h"
 	"Refrigerador.h"
@@ -96,13 +96,13 @@
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732482092 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
+1732555205 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
 1732040191 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
-1732423482 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
+1732555205 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
 1732040065 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\metodoalmacenamiento.cpp
