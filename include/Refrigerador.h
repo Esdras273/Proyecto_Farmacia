@@ -19,7 +19,7 @@ class Refrigerador : public MetodoAlmacenamiento
         void cambiarOrden(int);
 
         //Getters y setters
-        int getNumRefrigerador(void);
+        int getNumRefrigerador();
         void setNumRefrigerador(int);
 
 };

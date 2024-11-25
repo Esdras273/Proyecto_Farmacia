@@ -32,7 +32,7 @@ void Alimento::vender(int cantidad)
     else
     {
         stock -= cantidad;
-        cout << "Venta realizada de " << nombre << ", quedan " << stock << " productos" << endl;
+        cout << "Venta realizada de " << nombre << ", quedan " << stock << " de " << nombre <<endl;
     }
 }
 

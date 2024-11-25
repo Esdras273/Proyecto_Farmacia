@@ -17,7 +17,10 @@ int Almacen::getNumEstanteria()
     return numEstanteria;
 }
 
-void Almacen::setNumEstanteria(int numEstanteria)
+void Almacen::setNumEstanteria(int numEstanteriaNuevo)
 {
-    this -> numEstanteria = numEstanteria;
+    if(numEstanteriaNuevo > 0)
+        this -> numEstanteria = numEstanteriaNuevo;
+    else
+        cout << "numero no valido" << endl;
 }

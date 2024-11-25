@@ -17,7 +17,10 @@ int Refrigerador::getNumRefrigerador()
     return numRefrigerador;
 }
 
-void Refrigerador::setNumRefrigerador(int numRefrigerador)
+void Refrigerador::setNumRefrigerador(int numRefrigeradorNuevo)
 {
-    this -> numRefrigerador = numRefrigerador;
+    if(numRefrigeradorNuevo > 0)
+        this -> numRefrigerador = numRefrigeradorNuevo;
+    else
+        cout << "numero no valido" << endl;
 }

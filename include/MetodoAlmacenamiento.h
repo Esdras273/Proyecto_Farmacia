@@ -17,10 +17,10 @@ class MetodoAlmacenamiento
         virtual void cambiarOrden(int);
 
         //Getters y setters
-        int getSeccion(void);
+        int getSeccion();
         void setSeccion(int);
 
-        bool getEnStock(void);
+        bool getEnStock();
         void setEnStock(int);
 
 };

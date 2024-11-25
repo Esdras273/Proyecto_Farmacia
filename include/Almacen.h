@@ -18,7 +18,7 @@ class Almacen : public MetodoAlmacenamiento
         void cambiarOrden(int);
 
         //Getters y setters
-        int getNumEstanteria(void);
+        int getNumEstanteria();
         void setNumEstanteria(int);
 
 };

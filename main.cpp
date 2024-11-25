@@ -28,7 +28,8 @@ bool buscarMedicina(vector<Medicamento*>&, int);
 bool eliminarAlimento(vector<Alimento*>&, int);
 bool eliminarMedicina(vector<Medicamento*>&, int);
 
-void comprobarID(vector<Alimento*>&);
+void comprobarID_Alimento(vector<Alimento*>&);
+void comprobarID_Medicamento(vector<Medicamento*>&);
 
 int main()
 {
@@ -68,8 +69,14 @@ int main()
     string validacion = " ";    //Con esto evitamos un mal uso del menu
     char eleccionProducto;      //Variable para seleccion dentro de las opciones 2, 3 y 4
     int id;                     //id para buscar entre los productos
+    int eleccionCoV;            //Eleccion para comprar o vender productos
+    int numCoV;                 //cantidad para comprar o vender productos
 
     cout << "Bienvenido" << endl;
+
+    //Asignar los metodos de almacenamiento
+    asignarAlmacen(medica, almacen1);
+    asignarRefrigerador(alimento, refrigerador1);
 
     do
     {
@@ -80,7 +87,8 @@ int main()
         cout << "3. Buscar producto" << endl;
         cout << "4. Eliminar producto registrado" << endl;
         cout << "5. Comparacion de productos" << endl;
-        cout << "6. Salir" << endl;
+        cout << "6. Manejo de inventario" << endl;
+        cout << "7. Salir" << endl;
 
         cin >> validacion;
 
@@ -107,11 +115,14 @@ int main()
                 if(eleccionProducto == '1')
                 {
                     agregarMedicina(medica);
+                    comprobarID_Medicamento(medica);
+                    asignarAlmacen(medica, almacen1);
                 }
                 else if(eleccionProducto == '2')
                 {
                     agregarAlimento(alimento);
-                    comprobarID(alimento);
+                    comprobarID_Alimento(alimento);
+                    asignarRefrigerador(alimento, refrigerador1);
                 }
                 else
                 {
@@ -127,11 +138,11 @@ int main()
                 cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
                 cin >> eleccionProducto;
 
-                cout << "Ingrese el ID del producto que quiera buscar" << endl;
-                cin >> id;
-
                 if(eleccionProducto == '1')
                 {
+                    cout << "Ingrese el ID del producto que quiera buscar" << endl;
+                    cin >> id;
+
                     if(!buscarMedicina(medica, id))
                     {
                         cout << "Medicamento no encontrado" << endl;
@@ -139,6 +150,9 @@ int main()
                 }
                 else if(eleccionProducto == '2')
                 {
+                    cout << "Ingrese el ID del producto que quiera buscar" << endl;
+                    cin >> id;
+
                     if(!buscarAlimento(alimento, id))
                     {
                         cout << "Alimento no encontrado" << endl;
@@ -153,15 +167,15 @@ int main()
 
             case '4':
                 eleccionProducto = ' ';
-                cout << "Que producto se va a buscar" << endl;
+                cout << "Que producto se va a eliminar" << endl;
                 cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
                 cin >> eleccionProducto;
 
-                cout << "Ingrese el ID del producto que quiera eliminar" << endl;
-                cin >> id;
-
                 if(eleccionProducto == '1')
                 {
+                    cout << "Ingrese el ID del producto que quiera eliminar" << endl;
+                    cin >> id;
+
                     if(!eliminarMedicina(medica, id))
                     {
                         cout << "Medicamento no encontrado" << endl;
@@ -169,6 +183,9 @@ int main()
                 }
                 else if(eleccionProducto == '2')
                 {
+                    cout << "Ingrese el ID del producto que quiera eliminar" << endl;
+                    cin >> id;
+
                     if(!eliminarAlimento(alimento, id))
                     {
                         cout << "Alimento no encontrado" << endl;
@@ -231,6 +248,113 @@ int main()
                 break;
 
             case '6':
+
+                cout << "Que tipo de producto se va a modificar" << endl;
+                cout << "1.-Medicamento \n2.-Alimento \n3.-Cambiar almacen\n4.-Regresar al menu" << endl;
+                cin >> eleccionProducto;
+
+                if(eleccionProducto == '1')
+                {
+                    cout << "1.-Comprar\n2.-Vender\n3.-Salir" << endl;
+                    cin >> eleccionCoV;
+
+                    if(eleccionCoV == 1)
+                    {
+                        cout << "Ingrese el ID del producto que quiera comparar" << endl;
+                        cin >> id;
+
+                        if(id > 0 && id < medica.size())
+                        {
+                            cout << "Ingrese la cantidad a comprar" << endl;
+                            cin >> numCoV;
+                            medica[id - 1]->comprar(numCoV);
+                        }
+                        else
+                        {
+                            cout << "Numero de ID fuera de rango" << endl;
+                        }
+                    }
+                    else if(eleccionCoV == 2)
+                    {
+                        cout << "Ingrese el ID del producto que quiera vender" << endl;
+                        cin >> id;
+
+                        if(id > 0 && id < medica.size())
+                        {
+                            cout << "Ingrese la cantidad a vender" << endl;
+                            cin >> numCoV;
+                            medica[id - 1]->vender(numCoV);
+                        }
+                        else
+                        {
+                            cout << "Numero de ID fuera de rango" << endl;
+                        }
+
+                    }
+                }
+                else if(eleccionProducto == '2')
+                {
+                    cout << "1.-Comprar\n2.-Vender\n3.-Salir" << endl;
+                    cin >> eleccionCoV;
+
+                    if(eleccionCoV == 1)
+                    {
+                        cout << "Ingrese el ID del producto que quiera comparar" << endl;
+                        cin >> id;
+
+                        if(id > 0 && id < alimento.size())
+                        {
+                            cout << "Ingrese la cantidad a comprar" << endl;
+                            cin >> numCoV;
+                            alimento[id - 1]->comprar(numCoV);
+                        }
+                        else
+                        {
+                            cout << "Numero de ID fuera de rango" << endl;
+                        }
+                    }
+                    else if(eleccionCoV == 2)
+                    {
+                        cout << "Ingrese el ID del producto que quiera vender" << endl;
+                        cin >> id;
+
+                        if(id > 0 && id < alimento.size())
+                        {
+                            cout << "Ingrese la cantidad a vender" << endl;
+                            cin >> numCoV;
+                            alimento[id - 1]->vender(numCoV);
+                        }
+                        else
+                        {
+                            cout << "Numero de ID fuera de rango" << endl;
+                        }
+
+                    }
+                }
+                else if(eleccionProducto == '3')
+                {
+                    cout << "1.-Almacen\n2.-Refrigerador\n3.-Salir" << endl;
+                    cin >> eleccionCoV;
+
+                    if(eleccionCoV == 1)
+                    {
+                        cout << "Ingrese el numero de la nueva estanteria" << endl;
+                        cin >> id;
+
+                        almacen1->setNumEstanteria(id);
+                    }
+                    else if(eleccionCoV == 2)
+                    {
+                        cout << "Ingrese el numero del nuevo refrigerador" << endl;
+                        cin >> id;
+
+                        refrigerador1->setNumRefrigerador(id);
+                    }
+                }
+
+                break;
+
+            case '7':
                 cout << "Gracias por usar" << endl;
                 control = 1;
                 break;
@@ -281,14 +405,14 @@ void cabeceraMedicamento()
 void asignarRefrigerador(vector<Alimento*>& alimentos, Refrigerador* refri) {
     for (size_t i = 0; i < alimentos.size(); i++) {
         alimentos[i]->setRefrigerador(refri); // Asignar el mismo refrigerador
-        cout << "Refrigerador asignado al alimento " << alimentos[i]->getNombre() << endl;
+        //cout << "Refrigerador asignado al alimento " << alimentos[i]->getNombre() << endl;
     }
 }
 
 void asignarAlmacen(vector<Medicamento*>& medicamentos, Almacen* almacen) {
     for (size_t i = 0; i < medicamentos.size(); i++) {
         medicamentos[i]->setAlmacen(almacen); // Asignar el mismo almacen
-        cout << "Almacen asignado al medicamento " << medicamentos[i]->getNombre() << endl;
+        //cout << "Almacen asignado al medicamento " << medicamentos[i]->getNombre() << endl;
     }
 }
 
@@ -310,11 +434,13 @@ void agregarMedicina(vector<Medicamento*>& medicamento)
 }
 
 bool buscarAlimento(vector<Alimento*> &alimentos, int id) {
+    cabeceraAlimento();
     for(size_t i = 0; i < alimentos.size(); i++)
     {
         if (alimentos[i]->getId() == id)
         {
             cout << *alimentos[i];
+            cout << "Se encuentra en el refrigerador " <<(alimentos[i]->getRefrigerador()->getNumRefrigerador()) << endl;
             return true;
         }
     }
@@ -322,11 +448,13 @@ bool buscarAlimento(vector<Alimento*> &alimentos, int id) {
 }
 
 bool buscarMedicina(vector<Medicamento*> &medicinas, int id) {
+    cabeceraMedicamento();
     for(size_t i = 0; i < medicinas.size(); i++)
     {
         if (medicinas[i]->getId() == id)
         {
             cout << *medicinas[i];
+            cout << "Se encuentra en la estanteria " <<(medicinas[i]->getAlmacen()->getNumEstanteria()) << endl;
             return true;
         }
     }
@@ -379,7 +507,7 @@ bool eliminarMedicina(vector<Medicamento*> &medicinas, int id) {
     return false;
 }
 
-void comprobarID(vector<Alimento*>& alimento) {
+void comprobarID_Alimento(vector<Alimento*>& alimento) {
     for(size_t i = 0; i < alimento.size(); i++)
     {
         for(size_t j = 0; j < alimento.size(); j++)
@@ -387,6 +515,19 @@ void comprobarID(vector<Alimento*>& alimento) {
             if(i != j && (alimento[i]->getId()) == (alimento[j]->getId()))
                {
                    alimento[j]->setId(alimento[j]->getId() + 1);
+               }
+        }
+    }
+}
+
+void comprobarID_Medicamento(vector<Medicamento*>& medicinas) {
+    for(size_t i = 0; i < medicinas.size(); i++)
+    {
+        for(size_t j = 0; j < medicinas.size(); j++)
+        {
+            if(i != j && (medicinas[i]->getId()) == (medicinas[j]->getId()))
+               {
+                   medicinas[j]->setId(medicinas[j]->getId() + 1);
                }
         }
     }

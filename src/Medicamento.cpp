@@ -32,7 +32,7 @@ void Medicamento::vender(int cantidad)
     else
     {
         stock -= cantidad;
-        cout << "Venta realizada de " << nombre << ", quedan " << stock << " de medicina" << endl;
+        cout << "Venta realizada de " << nombre << ", quedan " << stock << " de " << nombre <<endl;
     }
 }
 

@@ -34,7 +34,7 @@
 1732037873 d:\udg\tercer semestre\poo\proyecto_farmacia\include\producto.h
 	<iostream>
 
-1732507048 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
+1732575081 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\alimento.cpp
 	"Alimento.h"
 
 1732506788 d:\udg\tercer semestre\poo\proyecto_farmacia\include\alimento.h
@@ -42,7 +42,7 @@
 	"Producto.h"
 	"Refrigerador.h"
 
-1732508396 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
+1732575070 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
 1732508309 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
@@ -50,30 +50,32 @@
 	"Producto.h"
 	"Almacen.h"
 
-1732545169 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+1732577085 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
 	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
+	"Almacen.h"
+	"Refrigerador.h"
 
-1732125192 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\almacen.cpp
+1732577175 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\almacen.cpp
 	"Almacen.h"
 
-1732134800 d:\udg\tercer semestre\poo\proyecto_farmacia\include\almacen.h
+1732575676 d:\udg\tercer semestre\poo\proyecto_farmacia\include\almacen.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
-1732125192 d:\udg\tercer semestre\poo\proyecto_farmacia\include\metodoalmacenamiento.h
+1732575694 d:\udg\tercer semestre\poo\proyecto_farmacia\include\metodoalmacenamiento.h
 	<iostream>
 
 1732125192 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\metodoalmacenamiento.cpp
 	"MetodoAlmacenamiento.h"
 
-1732134800 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\refrigerador.cpp
+1732577169 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\refrigerador.cpp
 	"Refrigerador.h"
 
-1732134800 d:\udg\tercer semestre\poo\proyecto_farmacia\include\refrigerador.h
+1732575683 d:\udg\tercer semestre\poo\proyecto_farmacia\include\refrigerador.h
 	<iostream>
 	"MetodoAlmacenamiento.h"
 
