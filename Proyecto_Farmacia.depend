@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1732557411 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
+1732568200 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
 	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
+	"Almacen.h"
+	"Refrigerador.h"
 
 1732130205 source:c:\users\pepea\onedrive\escritorio\proyecto_farmacia\src\producto.cpp
 	"Producto.h"

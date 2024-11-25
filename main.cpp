@@ -4,6 +4,8 @@
 #include "Producto.h"
 #include "Medicamento.h"
 #include "Alimento.h"
+#include "Almacen.h"
+#include "Refrigerador.h"
 
 using namespace std;
 
@@ -13,6 +15,9 @@ void mostrarVectorMedicamento(const vector<Medicamento*>&);
 
 void cabeceraAlimento();
 void cabeceraMedicamento();
+
+void asignarRefrigerador(vector<Alimento*>& alimentos, Refrigerador* refri);
+void asignarAlmacen(vector<Medicamento*>& medicamentos, Almacen* almacen);
 
 void agregarAlimento(vector<Alimento*>&);
 void agregarMedicina(vector<Medicamento*>&);
@@ -39,6 +44,11 @@ int main()
     Alimento *ali1 = new Alimento(59.60, 01, "Maruchan", 30, "comida", 50, "5 de grasas");
     Alimento *ali2 = new Alimento(60.00, 02, "Gatorade", 8, "bebida", 500, "20 de azucar");
     Alimento *ali3 = new Alimento(19.99, 03, "Carlos V", 22, "chocolate", 75, "exceso de azucar");
+
+    //Refigerador con parametros seccion, enStock, numEstanteria
+    Refrigerador* refrigerador1 = new Refrigerador(1, true, 1);
+    //Alamcen con parametros seccion, enStock, numRefrigerador
+    Almacen* almacen1 = new Almacen(1, true, 1);
 
     //Agregamos los alimentos al vector "alimento"
     alimento.push_back(ali1);
@@ -263,6 +273,22 @@ void cabeceraMedicamento()
     cout << " ID | Precio | Nombre | Stock |Tipo Medicamento| Dosis | Via Administracion" << endl;
     cout << "---------------------------------------------------------------------------" << endl;
 }
+
+void asignarRefrigerador(vector<Alimento*>& alimentos, Refrigerador* refri) {
+    for (size_t i = 0; i < alimentos.size(); i++) {
+        alimentos[i]->setRefrigerador(refri); // Asignar el mismo refrigerador
+        cout << "Refrigerador asignado al alimento " << alimentos[i]->getNombre() << endl;
+    }
+}
+
+void asignarAlmacen(vector<Medicamento*>& medicamentos, Almacen* almacen) {
+    for (size_t i = 0; i < medicamentos.size(); i++) {
+        medicamentos[i]->setAlmacen(almacen); // Asignar el mismo almacen
+        cout << "Almacen asignado al medicamento " << medicamentos[i]->getNombre() << endl;
+    }
+}
+
+
 
 void agregarAlimento(vector<Alimento*>& alimento) {
     Alimento* nuevoAlimento = new Alimento();
