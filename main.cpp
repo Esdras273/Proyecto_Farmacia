@@ -4,6 +4,7 @@
 #include "Producto.h"
 #include "Medicamento.h"
 #include "Alimento.h"
+#include "MetodoAlmacenamiento.h"
 #include "Almacen.h"
 #include "Refrigerador.h"
 
@@ -199,51 +200,82 @@ int main()
                 break;
 
             case '5':
+                int primerID, segundoID;        //Variables para comparar productos elegidos
+
+                //----------------------------Alimentos-------------------------//
                 cout << "--Comparacion de los precios en el producto de Alimentos\n" << endl;
-                cout << "La suma del primer y segundo producto es " << (*ali1 + *ali2).getPrecio() << endl;
-                cout << "La resta del  segundo y tercer producto es " << (*ali2 - *ali3).getPrecio() << endl;
-                if(*ali1 == *ali2)
+                cout << "Ingrese el ID del primer alimento que quiera comparar" << endl;
+                cin >> primerID;
+                if(primerID <= 0 || primerID > alimento.size())
                 {
-                    cout << "El primer y segundo producto tiene el mismo precio" << endl;
-                }else
-                {
-                    cout << "El primer y segundo producto NO tienen el mismo precio" << endl;
-                }
-                if (*ali1 != *ali3)
-                {
-                    cout << "El producto 1 y el producto 3 tiene diferentes precios" << endl;
-                }else{
-                    cout << "El producto 1 y el producto 3 tiene el mismo precio" << endl;
-                }
-                if (*ali3 < *ali1)
-                {
-                    cout << "El producto 3 tiene un precio menor que el producto 1" << endl;
-                }else if(*ali3 > *ali1){
-                    cout << "El producto 3 tiene un precio mayor que el producto 1" << endl;
+                    cout << "ID fuera de rango" << endl;
+                    break;
                 }
 
-                cout << "\n--Comparacion de los precios en el producto de Medicamentos\n" << endl;
-                cout << "La suma del primer y segundo producto es " << (*med1 + *med2).getPrecio() << endl;
-                cout << "La resta del  segundo y tercer producto es " << (*med2 - *med3).getPrecio() << endl;
-                if(*med1 == *med3){
-                    cout << "El primer y tercer producto tiene el mismo precio" << endl;
-                }else{
-                    cout << "El primer y tercer producto NO tienen el mismo precio" << endl;
-                }
-                if (*med1 != *med2)
+                cout << "Ingrese el ID del segundo alimento que quiera comparar" << endl;
+                cin >> segundoID;
+                if(segundoID <= 0 || segundoID > alimento.size())
                 {
-                    cout << "El producto 1 y el producto 2 tiene diferentes precios" << endl;
-                }else{
-                    cout << "El producto 1 y el producto 2 tiene el mismo precio" << endl;
-                }
-                if (*med2 < *med3)
-                {
-                    cout << "El producto 2 tiene un precio menor que el producto 3" << endl;
-                }else if(*med2 > *med3){
-                    cout << "El producto 2 tiene un precio mayor que el producto 3" << endl;
+                    cout << "ID fuera de rango" << endl;
+                    break;
                 }
 
-                cout<<"\n"<<endl;
+                cout << "La suma los precios de los alimento es " << (*alimento[primerID - 1] + *alimento[segundoID - 1]).getPrecio() << endl;
+                cout << "La resta de los precios de los alimentos es " << (*alimento[primerID - 1] - *alimento[segundoID - 1]).getPrecio() << endl;
+
+                if(*alimento[primerID - 1] == *alimento[segundoID - 1])
+
+                    cout << "Estos alimentos tienen el mismo precio" << endl;
+
+                if(*alimento[primerID - 1] != *alimento[segundoID - 1])
+
+                    cout << "Estos alimentos tienen diferente precio" << endl;
+
+                if(*alimento[primerID - 1] < *alimento[segundoID - 1])
+
+                    cout << "El primer alimento tiene un menor valor que el segundo" << endl;
+
+                if(*alimento[primerID - 1] > *alimento[segundoID - 1])
+                    cout << "El primer alimento tiene un valor mayor al segundo" << endl;
+
+                //----------------------------Medicamentos-------------------------//
+                cout << "\n--Comparacion de los precios de Medicamentos\n" << endl;
+
+               cout << "Ingrese el ID del primer medicamento que quiera comparar" << endl;
+                cin >> primerID;
+                if(primerID <= 0 || primerID > medica.size())
+                {
+                    cout << "ID fuera de rango" << endl;
+                    break;
+                }
+
+                cout << "Ingrese el ID del segundo alimento que quiera comparar" << endl;
+                cin >> segundoID;
+                if(segundoID <= 0 || segundoID > medica.size())
+                {
+                    cout << "ID fuera de rango" << endl;
+                    break;
+                }
+
+                cout << "La suma los precios de los alimento es " << (*medica[primerID - 1] + *medica[segundoID - 1]).getPrecio() << endl;
+                cout << "La resta de los precios de los alimentos es " << (*medica[primerID - 1] - *medica[segundoID - 1]).getPrecio() << endl;
+
+                if(*alimento[primerID - 1] == *alimento[segundoID - 1])
+
+                    cout << "Estos medicamentos tienen el mismo precio" << endl;
+
+                if(*alimento[primerID - 1] != *alimento[segundoID - 1])
+
+                    cout << "Estos medicamentos tienen diferente precio" << endl;
+
+                if(*alimento[primerID - 1] < *alimento[segundoID - 1])
+
+                    cout << "El primer medicamento tiene un menor valor que el segundo" << endl;
+
+                if(*alimento[primerID - 1] > *alimento[segundoID - 1])
+                    cout << "El primer medicamento tiene un valor mayor al segundo" << endl;
+
+                cout << "\n" <<endl;
 
                 break;
 
@@ -333,7 +365,7 @@ int main()
                 }
                 else if(eleccionProducto == '3')
                 {
-                    cout << "1.-Almacen\n2.-Refrigerador\n3.-Salir" << endl;
+                    cout << "1.-Estanteria\n2.-Refrigerador\n3.-Salir" << endl;
                     cin >> eleccionCoV;
 
                     if(eleccionCoV == 1)

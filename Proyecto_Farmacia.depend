@@ -42,7 +42,7 @@
 	"Producto.h"
 	"Refrigerador.h"
 
-1732575070 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
+1732583089 source:d:\udg\tercer semestre\poo\proyecto_farmacia\src\medicamento.cpp
 	"Medicamento.h"
 
 1732583082 d:\udg\tercer semestre\poo\proyecto_farmacia\include\medicamento.h
@@ -50,7 +50,7 @@
 	"Producto.h"
 	"Almacen.h"
 
-1732577085 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+1732584390 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
 	"Producto.h"
