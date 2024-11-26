@@ -50,10 +50,9 @@
 	"Producto.h"
 	"Almacen.h"
 
-1732584390 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
+1732588111 source:d:\udg\tercer semestre\poo\proyecto_farmacia\main.cpp
 	<iostream>
 	<vector>
-	"Producto.h"
 	"Medicamento.h"
 	"Alimento.h"
 	"Almacen.h"

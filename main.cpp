@@ -1,10 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "Producto.h"
 #include "Medicamento.h"
 #include "Alimento.h"
-#include "MetodoAlmacenamiento.h"
 #include "Almacen.h"
 #include "Refrigerador.h"
 
@@ -136,7 +134,7 @@ int main()
             case '3':
                 eleccionProducto = ' ';
                 cout << "Que producto se va a buscar" << endl;
-                cout << "1.- Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
+                cout << "1.-Medicamento \n2.-Alimento \n3.-Regresar al menu" << endl;
                 cin >> eleccionProducto;
 
                 if(eleccionProducto == '1')
@@ -292,7 +290,7 @@ int main()
 
                     if(eleccionCoV == 1)
                     {
-                        cout << "Ingrese el ID del producto que quiera comparar" << endl;
+                        cout << "Ingrese el ID del producto que quiera comprar" << endl;
                         cin >> id;
 
                         if(id > 0 && id < medica.size())
@@ -331,7 +329,7 @@ int main()
 
                     if(eleccionCoV == 1)
                     {
-                        cout << "Ingrese el ID del producto que quiera comparar" << endl;
+                        cout << "Ingrese el ID del producto que quiera comprar" << endl;
                         cin >> id;
 
                         if(id > 0 && id < alimento.size())
@@ -466,11 +464,11 @@ void agregarMedicina(vector<Medicamento*>& medicamento)
 }
 
 bool buscarAlimento(vector<Alimento*> &alimentos, int id) {
-    cabeceraAlimento();
     for(size_t i = 0; i < alimentos.size(); i++)
     {
         if (alimentos[i]->getId() == id)
         {
+            cabeceraAlimento();
             cout << *alimentos[i];
             cout << "Se encuentra en el refrigerador " <<(alimentos[i]->getRefrigerador()->getNumRefrigerador()) << endl;
             return true;
@@ -480,11 +478,11 @@ bool buscarAlimento(vector<Alimento*> &alimentos, int id) {
 }
 
 bool buscarMedicina(vector<Medicamento*> &medicinas, int id) {
-    cabeceraMedicamento();
     for(size_t i = 0; i < medicinas.size(); i++)
     {
         if (medicinas[i]->getId() == id)
         {
+            cabeceraMedicamento();
             cout << *medicinas[i];
             cout << "Se encuentra en la estanteria " <<(medicinas[i]->getAlmacen()->getNumEstanteria()) << endl;
             return true;
