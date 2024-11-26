@@ -36,13 +36,6 @@ void Medicamento::vender(int cantidad)
     }
 }
 
-void Medicamento::mostrar()
-{
-    cout<<"Precio:"<< precio <<" ID:"<< id <<" Nombre:"<< nombre <<" Stock:"<< stock <<
-    " Tipo de Medicamento:"<< tipoMedicamento <<" Dosis:"<< dosis <<" Via de Adiminstracion:"<< viaAdministracion <<endl;
-}
-
-
 //Getters y setters
 string Medicamento::getTipoMedicamento()
 {

@@ -23,7 +23,6 @@ class Medicamento : public Producto
         //Metodos propios
         void comprar(int);
         void vender(int);
-        void mostrar();
 
         //Getters y setters
         Almacen *getAlmacen() { return almacen;};
